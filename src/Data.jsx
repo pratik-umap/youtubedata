@@ -20,11 +20,10 @@ function Data() {
         .then((res)=>res.json())
         .then((res)=>{
         setItems(res.comments);
-        console.log(res.comments)
         })
         .catch((err)=>{
-            console.log(err);
-        })
+            throw err;
+       })
     },[])
 
       const handleSearch = (searchTerm) => {
